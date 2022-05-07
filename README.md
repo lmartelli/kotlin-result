@@ -64,7 +64,7 @@ return type of your function a `Result`.
 
 ```kotlin
 fun checkPrivileges(user: User, command: Command): Result<Command, CommandError> {
-    return if (user.rank >= command.mininimumRank) {
+    return if (user.rank >= command.minimumRank) {
         Ok(command)
     } else {
         Err(CommandError.InsufficientRank(command.name))
